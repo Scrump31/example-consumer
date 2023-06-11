@@ -49,7 +49,6 @@ describe('API Pact test', () => {
 
         // Assert - did we get the expected response
         expect(product).toStrictEqual(new Product(expectedProduct));
-        return;
       });
     });
 
@@ -76,7 +75,6 @@ describe('API Pact test', () => {
         await expect(api.getProduct('11')).rejects.toThrow(
           'Request failed with status code 404'
         );
-        return;
       });
     });
   });
@@ -114,7 +112,6 @@ describe('API Pact test', () => {
 
         // assert that we got the expected response
         expect(products).toStrictEqual([new Product(expectedProduct)]);
-        return;
       });
     });
   });
